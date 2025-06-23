@@ -1005,13 +1005,13 @@ class Agent(Generic[Context]):
 
 		else:
 			from anthropic import RateLimitError as AnthropicRateLimitError
-			from google.api_core.exceptions import ResourceExhausted
+			# from google.api_core.exceptions import ResourceExhausted
 			from openai import RateLimitError
 
+			# ResourceExhausted,  # Google
 			# Define a tuple of rate limit error types for easier maintenance
 			RATE_LIMIT_ERRORS = (
 				RateLimitError,  # OpenAI
-				ResourceExhausted,  # Google
 				AnthropicRateLimitError,  # Anthropic
 			)
 

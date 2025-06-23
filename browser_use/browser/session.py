@@ -854,7 +854,7 @@ class BrowserSession(BaseModel):
 					except Exception:
 						pass  # let the logger below handle it
 					try:
-						test_browser = await self.playwright.chromium.launch(headless=True)
+						test_browser = await self.playwright.chromium.launch(headless=False)
 						test_browser_version = test_browser.version
 						await test_browser.close()
 					except Exception:
