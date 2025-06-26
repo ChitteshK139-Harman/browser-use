@@ -1,0 +1,129 @@
+{
+    "task": {
+            "testCaseId": "TC001",
+            "testDescription": "Verify that the user is able to successfully login to SWAG LABS using the URL https://www.saucedemo.com/v1/ with the username 'standard_user' and password 'secret_sauce'.",
+            "preconditions": "The user has access to a device with an internet connection and a web browser. The SWAG LABS application is accessible via the URL https://www.saucedemo.com/v1/. The username 'standard_user' and password 'secret_sauce' are valid credentials.",
+            "testSteps": [
+                {
+                    "step": "Open a web browser and navigate to the URL https://www.saucedemo.com/v1/.",
+                    "expectedResults": "The SWAG LABS login page is displayed."
+                },
+                {
+                    "step": "Enter 'standard_user' in the username field.",
+                    "expectedResults": "The username field accepts the input 'standard_user'."
+                },
+                {
+                    "step": "Enter 'secret_sauce' in the password field.",
+                    "expectedResults": "The password field accepts the input 'secret_sauce'."
+                },
+                {
+                    "step": "Click on the 'Login' button.",
+                    "expectedResults": "The user is successfully logged in and redirected to the SWAG LABS homepage."
+                }
+            ],
+            "expectedResults": "The user is able to log in successfully using the provided credentials and is redirected to the SWAG LABS homepage.",
+            "Postconditions": "The user is logged into the application and can access the features available on the homepage.",
+            "uid": "83650bec857d48dc83421cfbda6fa44b"
+        }
+}
+
+
+{
+    "task": {
+        "testCaseId": "TC002",
+        "testDescription": "Verify that the user is able to log in to the SWAG LABS application, sort products by price (low to high), add the first two items to the cart, and successfully complete the checkout process.",
+        "preconditions": "The user has access to a working internet connection and a web browser. The SWAG LABS application is reachable via https://www.saucedemo.com/v1/. Valid login credentials ('standard_user' / 'secret_sauce') are available.",
+        "testSteps": [
+            {
+                "step": "Open a web browser and navigate to the URL https://www.saucedemo.com/v1/.",
+                "expectedResults": "The SWAG LABS login page is displayed."
+            },
+            {
+                "step": "Enter 'standard_user' in the username field.",
+                "expectedResults": "The username field accepts the input 'standard_user'."
+            },
+            {
+                "step": "Enter 'secret_sauce' in the password field.",
+                "expectedResults": "The password field accepts the input 'secret_sauce'."
+            },
+            {
+                "step": "Click on the 'Login' button.",
+                "expectedResults": "The user is successfully logged in and redirected to the SWAG LABS homepage."
+            },
+            {
+                "step": "Click on the drop-down box to sort products.",
+                "expectedResults": "The sort options are displayed."
+            },
+            {
+                "step": "Select 'Price (low to high)' from the drop-down options.",
+                "expectedResults": "The product list is sorted by price in ascending order."
+            },
+            {
+                "step": "Add the first two items displayed to the cart.",
+                "expectedResults": "The selected items are added to the cart."
+            },
+            {
+                "step": "Click on the cart icon with the item count badge at the top right corner.",
+                "expectedResults": "The cart page is displayed with the added items."
+            },
+            {
+                "step": "Click on the 'Checkout' button.",
+                "expectedResults": "The checkout information page is displayed."
+            },
+            {
+                "step": "Enter 'Chittesh' in the first name field, 'K' in the last name field, and '562106' in the postal code field.",
+                "expectedResults": "The checkout form accepts the input details."
+            },
+            {
+                "step": "Click on the 'Continue' button, we will navigate to checkout information page.",
+                "expectedResults": "The checkout overview page is displayed, showing the list of selected products along with the total cost."
+            },
+            {
+                "step": "Click on the 'Finish' button to place the order.",
+                "expectedResults": "The user is redirected to the confirmation page displaying the message 'THANK YOU FOR YOUR ORDER' indicating successful order placement."
+            }
+        ],
+        "expectedResults": "The user completes the entire shopping process — from login to sorting, selecting products, adding them to the cart, and finishing the checkout successfully.",
+        "Postconditions": "The user has successfully placed an order and is redirected to the order confirmation page.",
+        "uid": "83650bec857d48dc83421cfbda6fa44b"
+    }
+}
+
+{
+    "task": {
+        "testCaseId": "TC003",
+        "testDescription": "Verify that the user can search for 'sapna book house', access the website, search for 'Mathematics for class 10', select the second product, add it to cart, and retrieve the cart summary.",
+        "preconditions": "The user has access to a device with an internet connection and a web browser. The Sapna Book House website is publicly accessible via search engine.",
+        "testSteps": [
+            {
+                "step": "Open a web browser and search for 'sapna book house' using any search engine.",
+                "expectedResults": "Search results are displayed with the official Sapna Book House website appearing in the first result."
+            },
+            {
+                "step": "Click on the first link from the search results.",
+                "expectedResults": "The Sapna Book House homepage is displayed."
+            },
+            {
+                "step": "In the search bar, enter 'Mathematics for class 10' and press Enter or click the search icon.",
+                "expectedResults": "Search results are displayed showing books related to 'Mathematics for class 10'."
+            },
+            {
+                "step": "Click on the second product listed in the search results.",
+                "expectedResults": "The product page for the selected book is displayed."
+            },
+            {
+                "step": "Click on the 'Add to Cart' button.",
+                "expectedResults": "The product is added to the shopping cart."
+            },
+            {
+                "step": "Click on the 'Go to Cart' button or icon to view the cart.",
+                "expectedResults": "The cart page is displayed showing the added product(s)."
+            }
+        ],
+        "expectedResults": "The user is able to view the cart containing the selected product, along with the total number of items and total payment amount.",
+        "Postconditions": "The product is available in the cart, and the user can proceed to checkout or modify cart contents.",
+        "uid": "a7c4f27e2dcb4261a19f894fe2e502db"
+    }
+}
+
+

@@ -426,6 +426,7 @@ async def control_agent(request: Request):
         # Handle different control actions
         if action == "pause":
             result = controller.pause()
+
         elif action == "resume":
             # If there's a new task and the agent is paused, update the task first
             if controller.paused:
@@ -450,11 +451,13 @@ async def control_agent(request: Request):
                     task_updated = controller.update_task(new_task)
             # Then resume the agent
             result = controller.resume()
+
         elif action == "stop":
             result = controller.stop()
             # Clean up the controller if stopped
             if result and session_id in active_agent_controllers:
                 del active_agent_controllers[session_id]
+                
         elif action == "update":
             # Standalone task update action (agent must be paused)
             if not new_task:
